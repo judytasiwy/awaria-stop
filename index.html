@@ -39,6 +39,7 @@
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem;
+      position: relative;
     }
 
     img {
@@ -48,6 +49,16 @@
 
     a {
       color: inherit;
+    }
+
+    /* SEO – ukryty nagłówek H1 tylko dla Google */
+    .seo-h1 {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
     }
 
     /* SEKCJA 1 – HERO / LOGO */
@@ -110,8 +121,9 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: #4b5563;
-      margin-top: -12px;      
+      margin-top: -12px;
       margin-bottom: 0.7rem;
+      background: #ffffff;
     }
 
     .hero-cta {
@@ -282,6 +294,13 @@
       color: #d1d5db;
     }
 
+    /* SEO – akapit z frazami lokalnymi */
+    .seo-local {
+      font-size: 0.8rem;
+      margin-top: 0.7rem;
+      color: #e5e7eb;
+    }
+
     .services-photo {
       border-radius: 1.2rem;
       overflow: hidden;
@@ -359,6 +378,18 @@
     .contact-note {
       font-size: 0.82rem;
       color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .why-list {
+      font-size: 0.84rem;
+      color: #374151;
+      padding-left: 1.1rem;
+      margin: 0.4rem 0 0;
+    }
+
+    .why-list li {
+      margin-bottom: 0.25rem;
     }
 
     .area-title {
@@ -395,11 +426,13 @@
 <div class="page">
   <div class="container">
 
+    <!-- SEO: ukryty nagłówek H1 -->
+    <h1 class="seo-h1">Pogotowie Hydrauliczne Białystok – AWARIA STOP</h1>
+
     <!-- SEKCJA 1 – LOGO + TELEFON -->
     <section class="hero" id="start">
       <div>
         <div class="hero-logo-row">
-          <!-- LOGO: podmień src na swoją nazwę pliku, np. logo.png -->
           <img src="logo.png" alt="Pogotowie Hydrauliczne AWARIA STOP – logo" class="hero-logo">
         </div>
 
@@ -414,7 +447,6 @@
         </p>
 
         <div class="hero-cta">
-          <!-- TELEFON – TYLKO TEN NUMER -->
           <a href="tel:797860833" class="btn-call">
             <span class="icon">📞</span>
             <span>Zadzwoń: 797&nbsp;860&nbsp;833</span>
@@ -442,7 +474,6 @@
       </div>
 
       <div class="hero-photo-wrapper">
-        <!-- ZDJĘCIE nr 1 – np. przy umywalce -->
         <img src="hydraulik-umywalka.png" alt="Hydraulik naprawiający baterię przy umywalce">
         <div class="hero-photo-label">
           Profesjonalne narzędzia • czysta praca
@@ -508,10 +539,17 @@
         <p class="service-note">
           Pracuję z poszanowaniem mieszkania: zabezpieczam miejsce pracy i sprzątam po zakończeniu.
         </p>
+
+        <!-- SEO – frazy lokalne -->
+        <p class="seo-local">
+          Jako doświadczony hydraulik Białystok pomagam przy awariach hydraulicznych na terenie miasta oraz okolicznych miejscowości:
+          Wasilków, Supraśl, Choroszcz, Kleosin, Juchnowiec Kościelny, Juchnowiec Dolny, Juchnowiec Górny, Ignatki, Niewodnica Kościelna,
+          Niewodnica Nargilewska, Dobrzyniewo Duże, Fasty, Zaścianki, Solniczki, Ogrodniczki i Grabówka.
+          Jeśli potrzebne jest pogotowie hydrauliczne Białystok lub szybkie usługi hydrauliczne w okolicy – zadzwoń, pomogę.
+        </p>
       </div>
 
       <div class="services-photo">
-        <!-- ZDJĘCIE nr 2 – prysznic / bokeh -->
         <img src="hydraulik-prysznic.png" alt="Hydraulik regulujący prysznic w łazience">
         <div class="services-photo-label">
           Dojazd do mieszkań, domów i lokali usługowych
@@ -535,6 +573,14 @@
           Odbieram, gdy jestem w pracy – jeśli nie mogę odebrać, oddzwaniam możliwie szybko.
           Możesz także wysłać SMS ze zdjęciem awarii.
         </div>
+
+        <!-- Dlaczego warto nas wybrać – krótki blok SEO -->
+        <ul class="why-list">
+          <li>Szybki dojazd na terenie Białegostoku i okolicznych miejscowości.</li>
+          <li>Specjalizacja w nagłych awariach hydraulicznych – także wieczorami.</li>
+          <li>Jasne zasady i uczciwe ceny ustalane przed rozpoczęciem pracy.</li>
+          <li>Wieloletnie doświadczenie w wykończeniach i instalacjach.</li>
+        </ul>
       </div>
 
       <div>
@@ -573,3 +619,4 @@
 </script>
 </body>
 </html>
+
